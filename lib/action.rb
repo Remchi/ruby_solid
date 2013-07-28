@@ -3,7 +3,7 @@ require_relative 'dicepool'
 module Actionable
   attr_reader :owner, :dicepool, :attribute, :difficulty
 
-  def initialize(owner)
+  def initialize(owner = nil)
     @owner = owner
     @dicepool = Dicepool.new
 

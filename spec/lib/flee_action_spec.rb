@@ -9,7 +9,7 @@ describe FleeAction do
                damage: nil,
                stealth: 3)}
   let(:dicepool) { double("dicepool") }
-  let(:action) { FleeAction.new hero, dicepool}
+  let(:action) { FleeAction.new hero}
   let(:monster) { double("monster",
                   toughness: 2,
                   kill: nil,
@@ -29,6 +29,9 @@ describe FleeAction do
 
 
   describe "effect" do
+    before :each do
+      Dicepool.stub(:new).and_return(dicepool)
+    end
     context "success" do
       it "sends flee message to the owner" do
         dicepool.stub(:skill_check).and_return(true)
