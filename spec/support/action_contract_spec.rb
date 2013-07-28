@@ -39,3 +39,9 @@ shared_examples "action" do
     expect(action).to respond_to(:activate)
   end
 end
+
+shared_examples "subaction" do
+  it "has an owner" do
+    expect(action.owner).to eq(hero)
+  end
+end
