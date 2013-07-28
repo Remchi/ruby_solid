@@ -7,6 +7,8 @@ describe AttackAction do
   let(:action) { AttackAction.new hero, dicepool}
   let(:monster) { double("monster", toughness: 2, kill: nil, damage: 4) }
 
+  it_behaves_like "action"
+
   describe "effect" do
     context "success" do
       before :each do
