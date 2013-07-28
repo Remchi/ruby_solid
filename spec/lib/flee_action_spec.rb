@@ -16,8 +16,8 @@ describe FleeAction do
                   damage: 4,
                   notice: 2) }
 
+  it_behaves_like "actionable"
   it_behaves_like "action"
-  it_behaves_like "subaction"
 
   it "has stealth for attribute" do
     expect(action.attribute).to eq(:stealth)

@@ -1,6 +1,7 @@
 require_relative 'action'
 
-class FleeAction < Action
+class FleeAction
+  include Actionable
 
   def action_attributes
     @attribute = :stealth
