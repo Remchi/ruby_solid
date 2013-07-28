@@ -15,9 +15,11 @@ class FleeAction
   end
 
   def success(target)
+    owner.flee
   end
 
   def failure(target)
+    owner.damage(target.damage)
   end
 
 end
