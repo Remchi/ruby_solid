@@ -5,7 +5,7 @@ describe AttackAction do
   let(:hero) { double("hero", strength: 3, gain_exp: nil, gain_gold: nil, damage: nil)}
   let(:dicepool) { double("dicepool") }
   let(:action) { AttackAction.new hero}
-  let(:monster) { double("monster", toughness: 2, kill: nil, damage: 4) }
+  let(:monster) { double("monster", toughness: 2, kill: nil, damage: 4, exp: 10, gold:10) }
 
   it_behaves_like "actionable"
   it_behaves_like "action"
